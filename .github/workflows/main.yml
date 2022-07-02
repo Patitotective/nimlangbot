@@ -1,0 +1,25 @@
+name: Run bot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+      CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+      ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+      ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Nim
+        uses: iffy/install-nim@v4.1.3
+
+      - name: Run bot
+        run: |
+          nimble install -d -y
+          nim c -r nimlangbot.nim
