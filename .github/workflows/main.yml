@@ -6,7 +6,7 @@ on:
     - cron: '*/5 * * * *'
 
 jobs:
-  build:
+  run:
     runs-on: ubuntu-latest
     env:
       CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
