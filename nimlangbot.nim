@@ -11,7 +11,7 @@ proc main() =
 
   for tweet in data:
     discard twitterApi.usersIdRetweets(botId, %* {"tweet_id": tweet["id"]})
-    discard twitterApi.usersIdLikes(botId %* {"tweet_id": tweet["id"]})
+    discard twitterApi.usersIdLikes(botId, %* {"tweet_id": tweet["id"]})
 
 when isMainModule:
   main()
