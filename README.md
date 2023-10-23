@@ -4,7 +4,7 @@ Twitter bot that retweets and likes Nim related tweets.
 ## About
 - Twitter: [@nimlangbot](https://twitter.com/nimlangbot).
 - GitHub: https://github.com/Patitotective/ImThemes.
-- Discord: [https://discord.gg/gdcPVjazCG](https://discord.gg/U23ZQMsvwc).
+- Discord: https://discord.gg/U23ZQMsvwc.
 
 Contact me:
 - Discord: **Patitotective#0127**.
